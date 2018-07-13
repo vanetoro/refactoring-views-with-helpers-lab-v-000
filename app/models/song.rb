@@ -2,8 +2,10 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   def artist_name
-    binding.pry
+
+  if  self.artist.name != nil
     self.artist.name
+  end
   end
 
   def artist_name=(name)
